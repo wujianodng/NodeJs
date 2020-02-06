@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       *{margin: 0;padding: 0;}
+       body{
+           position: absolute;
+           top: 0;
+           left: 0;
+           bottom: 0;
+           right: 0;
+           background: black;
+       }
+       header {
+           width: 100%;
+           text-align: center;
+       }
+       header h1 {
+           color: #fff;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>吴建栋的个人服务器</h1>
+    </header>
+    <main>
+        <img src="./img/g1.jpg" alt="">
+    </main>
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.onload = () =>{
+            console.log(JSON.parse(xhr.responseText))
+        }
+        xhr.open('get','http://localhost:2020/goods',true)
+        xhr.send();
+    </script>
+</body>
+</html>
